@@ -1,0 +1,23 @@
+{
+  "name": "responsive-html5-resume",
+  "version": "1.0.0",
+  "description": "How to build a responsive html5 resume",
+  "main": "index.js",
+  "scripts": {
+    "slides": "npx reveal-md responsive-html5-resume.md",
+	"customcss": "npx reveal-md responsive-html5-resume.md -w --css custom.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/interglobalmedia/responsive-html5-resume.git"
+  },
+  "author": "Maria D. Campbell",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/interglobalmedia/responsive-html5-resume/issues"
+  },
+  "homepage": "https://github.com/interglobalmedia/responsive-html5-resume#readme",
+  "devDependencies": {
+    "reveal-md": "^5.0.0"
+  }
+}
