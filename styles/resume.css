@@ -161,7 +161,7 @@ a:link, a:active, a:focus, a:visited, a:hover {
 		margin-left: 0; padding-left: 0;
 	}
 
-    .page .resume_content, .page .resume_skills {
+    .page .professional_experience, .page .resume_skills {
 		float: none;
 		margin: 0;
 		padding: 0;
@@ -246,7 +246,7 @@ a:link, a:active, a:focus, a:visited, a:hover {
 
   	/* 2 columm layout */
 	/* column 1: article */
-	.page .resume_content {
+	.page .professional_experience {
 		float: left;
 		margin-bottom: 0.35714286em;
 		margin-top: 1em;
@@ -273,7 +273,7 @@ a:link, a:active, a:focus, a:visited, a:hover {
 
     /* 2 columm layout */
     /* column 1: */
-	.page .resume_content {
+	.page .professional_experience {
 		float: left;
 		margin-bottom: 0.35714286em;
 		width: 61.45833%;
