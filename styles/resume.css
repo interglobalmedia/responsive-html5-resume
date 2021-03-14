@@ -1,38 +1,42 @@
+/* CSS reset */
 * {
+	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
-	box-sizing: border-box;
 }
+
 /* Resume Typography */
 html {
-	font-size: 100.01%
+	font-size: 100.01%;
 }
 
 body {
 	background-color: #DEDEDE;
 	font: normal 0.75em/1.5 "Georgia", "Times New Roman", serif;
 	overflow-x: hidden;
-} /*establish 12px font with verticle rhythm*/
+} /*establish 12px font with vertical rhythm*/
 
 /* =header font size */
 h1, h2, h3, h4, h5, h6 {
-	color: #111;
 	font-family: "Tahoma", "Helvetica", "Droid Sans", sans-serif;
 	letter-spacing: 1px;
 }
 
 h1 {
 	border-bottom: 0.07142855em double #444;
-	color: #000; font: normal 3.5em/2 "Georgia", sans-serif;
+	font: normal 3.5em/2 "Georgia", sans-serif;
 	text-align: center;
 }
 
 h2 {
-	color: #000;
 	font-size: 1.5em;
-	letter-spacing: 0.07142855em;
 	font-variant: small-caps;
+	letter-spacing: 0.07142855em;
 } /* 24px / 16px */
+
+h1, h2 {
+	color: #000;
+}
 
 h3 {
 	border-bottom: 0.07142855em solid #333;
@@ -43,9 +47,11 @@ h3 {
 	position: relative;
 }  /* 20px / 16px */
 
+/* section class inside the div element with the
+class of `resume_skills` for the education section */
 .education {
-	font-size: 1em;
 	display: block;
+	font-size: 1em;
 }
 
 .education h3 time {
@@ -59,7 +65,11 @@ h4 {
 	line-height: 1.2857em;
 	margin-bottom: 0.375em;
 	margin-top: 1.0893em;
-	}  /* 18px / 16px */
+}/* 18px / 16px */
+
+h4, h5, h6 {
+	color: #111;
+}
 
 /* =p leading */
 p {
@@ -94,7 +104,7 @@ header h1 {
 	text-shadow: 2px 3px 2px #999;
 }
 
-header h1 a:hover {
+header a:hover {
 	color: #0030ff;
 }
 
@@ -110,9 +120,10 @@ header h1 a:hover {
 
 /*h3 {display: inline-block; margin-top: 0; padding-top: 0;}*/
 .time {
+	float: right;
 	font-size: 0.75em;
 	font-weight: normal;
-	float: right; margin-top: 0;
+	margin-top: 0;
 	padding-top: 0;
 	position: absolute;
 	right: 0;
@@ -122,6 +133,7 @@ header h1 a:hover {
 ul {
 	margin: 0 2em 0.857em;
 }
+
 ul li {
 	list-style-type: square;
 	position: relative;
@@ -130,7 +142,6 @@ ul li {
 .technology li > span {
 	display: none;
 }
-
 
 /* =a styles */
 a:link, a:active, a:focus, a:visited, a:hover {
@@ -157,7 +168,8 @@ a:link, a:active, a:focus, a:visited, a:hover {
 	}
 
     header h2, header p {
-		margin-left: 0; padding-left: 0;
+		margin-left: 0;
+		padding-left: 0;
 	}
 
     .page .professional_experience, .page .resume_skills {
@@ -171,6 +183,25 @@ a:link, a:active, a:focus, a:visited, a:hover {
 		color: #0030ff;
 	}
 
+	b {
+		margin-left: 0.25em;
+	}
+
+	.sample-work li {
+		font-size: 1em;
+		line-height: 2;
+		margin: 0.75vh 0;
+	}
+
+	.achievements li {
+		font-size: 1em;
+		margin: 0.5vh 0;
+	}
+
+	.achievements li a {
+		padding: 2vw;
+	}
+
     article, aside {
 		margin: 0 10px;
 		padding: 0;
@@ -181,6 +212,11 @@ a:link, a:active, a:focus, a:visited, a:hover {
 		margin-bottom: 1em;
 	}
 
+	.contact-info p {
+		line-height: 2;
+		margin: 0.75vh 0;
+	}
+
 	.footer-nav ul {
 		display: block;
 		margin-left: 0;
@@ -189,16 +225,17 @@ a:link, a:active, a:focus, a:visited, a:hover {
 	}
 
 	.footer-nav li {
-	    list-style-type: none;
-	    margin: 0.5vw;
-		line-height: 2;
 		border-bottom: 1px dashed;
+		line-height: 3.5;
+	    list-style-type: none;
+	    margin: 0 0.5vw;
+		font-size: 1.3em;
 	}
 
 	.footer-nav a {
-	    text-decoration: none;
-	    padding: 2vw;
 		cursor: pointer;
+		padding: 2vh 2vw;
+	    text-decoration: none;
 	}
 
 	.footer-nav a:hover {
@@ -207,14 +244,15 @@ a:link, a:active, a:focus, a:visited, a:hover {
 }
 
 @media (min-width: 900px) {
+
     html, body, .page {
 		border: none !important;
 		color: #444 !important;
-		text-shadow: none !important;
+		-ms-filter: none !important;
 		filter: none !important;
 		margin: 0;
 		padding: 0;
-		-ms-filter: none !important;
+		text-shadow: none !important;
 	}
 
     body {
@@ -228,6 +266,7 @@ a:link, a:active, a:focus, a:visited, a:hover {
 	.footer-nav li:nth-of-type(1) {
 		margin-left: 0.75rem;
 	}
+
     /* page holder */
     .page {
 		background: #fff;
@@ -243,21 +282,25 @@ a:link, a:active, a:focus, a:visited, a:hover {
 		margin-top: 1em;
 		width: 590px;
 	}
+
 	/* column 2: aside */
 	.page .resume_skills {
 		float: right;
 		margin-top: 1em;
 		width: 365px;
 	}
+
 	/* layout padding*/
 	article {
 		margin: 0 20px 0 40px;
 		position: relative;
 	}
+
 	aside {
 		margin: 0 40px 0 1.25rem;
 		position: relative;
 	}
+
 	aside h2 {
 		margin-bottom: 1.05357em;
 	}
@@ -269,11 +312,13 @@ a:link, a:active, a:focus, a:visited, a:hover {
 		margin-bottom: 0.35714286em;
 		width: 61.45833%;
 	} /* 590px / 960px */
+
     /* column 2: */
 	.page .resume_skills {
 		float: right;
 		width: 34.375%;
 	}  /* 270px / 960px */
+
     header p {
 		width: 57.291667%
 	}
@@ -293,6 +338,7 @@ a:link, a:active, a:focus, a:visited, a:hover {
 		white-space: nowrap;
 	}
 
+	/* =footer placement */
 	footer h3 {
 		margin-left: 0.5rem;
 	}
@@ -325,9 +371,9 @@ a:link, a:active, a:focus, a:visited, a:hover {
 	}
 
 	.footer-nav a {
-	    text-decoration: none;
-	    padding: 2vw;
 		cursor: pointer;
+		padding: 2vw;
+	    text-decoration: none;
 	}
 
 	.footer-nav a:hover {
