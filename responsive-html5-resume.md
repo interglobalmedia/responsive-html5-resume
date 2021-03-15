@@ -1426,7 +1426,7 @@ CSS text-shadow Property](https://www.w3schools.com/cssref/css3_pr_text-shadow.a
 ---
 
 <section class="section">
-	<h2 class="sentence">The header display: header a:hover</h2>
+	<h2 class="sentence">The header display: header a:hover selector</h2>
 
 ***Next***, and **last** in the `header display selectors`, is the `header a:hover descendant combinator pseudo class selector`.
 
@@ -2205,7 +2205,7 @@ I **set** the `width property` to the `value` of `93.75%`. This is what ***creat
 <section class="section">
 	<h2 class="sentence">The .page .professional_experience class selector</h2>
 
-***Next***, I **define** the .`page .professional_experience class selector`. It **targets** the the `section element` with the **class** of `.professional_experience` within the `div element` with the **class** of `.page`. This is the `first` (`left`) `column` in the `desktop two column layout`.
+***Next***, I **define** the `.page .professional_experience class selector`. It **targets** the the `section element` with the **class** of `.professional_experience` within the `div element` with the **class** of `.page`. This is the `first` (`left`) `column` in the `desktop two column layout`.
 
 ```css
 /* 2 columm layout */
