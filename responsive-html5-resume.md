@@ -1140,7 +1140,7 @@ I **set** the `font-size` to `1.25em`, which is **equivalent** to `20px`.
 
 I **set** the `margin-bottom` **property value** to `0.375em` and the `margin-top` **property value** to `1.05357em`. ***Together***, they **add up** to `1.5em`, which is the ***default*** `line-height` we **originally set** inside the `body element selector` **rule set**.
 
-I **set** the `position property` **value** to `relative`. I **set** the `position property` to the `value` of `relative`. This is so that the `positioning properties` of `top`, `left`, `right`, and `bottom` can **move** the `div`. ***Otherwise***, the `div` would have the ***default*** `position property value` of `static`.
+I **set** the `position property` **value** to `relative`. This is so that it ***no longer*** holds the **default** `position property` **value** of `static`. It is ***positioned*** `relative` to its `normal position`. **Setting** the the `top`, `right`, `bottom`, and `left properties` will **cause** it to be **adjusted away** from its `normal position`. **Other content** will ***not*** be **adjusted** to **fit** into any **gap** left by the `element`.
 
 </section>
 
@@ -1289,9 +1289,9 @@ I **set** a `margin-bottom` of `0.5em` to all `p elements`, and a `margin-top` o
 ---
 
 <section class="section">
-	<h2 class="sentence">p leading: the p + p element selector</h2>
+	<h2 class="sentence">p leading: the p + p adjacent sibling element selector</h2>
 
-The  `p element + p element selector` ***selects*** and ***styles*** the **first** `p element` that is **placed** after `p elements`.
+The  `p element + p adjacent sibling element selector` ***selects*** and ***styles*** the **first** `p element` that is **placed** after `p elements`.
 
 ```css
 p + p {
@@ -1310,9 +1310,9 @@ p + p {
 ---
 
 <section class="section">
-	<h2 class="sentence">p leading: the p + ul element selector</h2>
+	<h2 class="sentence">p leading: the p + ul adjacent sibling element selector</h2>
 
-The  `p element` + `ul element selector` **selects** and **styles** the **first** `ul element` that is **placed** after `p elements`.
+The  `p element` + `ul adjacent sibling element selector` **selects** and **styles** the **first** `ul element` that is **placed** after `p elements`.
 
 ```css
 p + ul {
@@ -1329,7 +1329,7 @@ I **set** a `margin-top` of `0.75em` **above** the **first** `ul element` after 
 <section class="section">
 	<h2 class="sentence">p leading: footer p, footer p + p grouping selector</h2>
 
-***Next*** comes the `footer p` (`descendant combinator selector`), `footer p + p` (`descendant combinator selector`) `grouping selector`.
+***Next*** comes the `footer p` (`descendant combinator selector`), `footer p + p` (`descendant adjacent sibling combinator selector`) `grouping selector`.
 
 ```css
 footer p, footer p + p {
@@ -1436,7 +1436,7 @@ header a:hover {
 }
 ```
 
-I **target** the `a element`  that **wraps** the `text content` of the `h1 element` in the `header` **on hover**. I **wanted** to **make sure** that **users** were ***alerted*** that the `h1 element` **also contains** a `hyperlink`. This `hyperlink` **takes** the `user` ***back*** to the `site`'s **home page**.
+I **target** the `a element` that **wraps** the `text content` of the `h1 element` in the `header` **on hover**. I **wanted** to **make sure** that **users** were ***alerted*** that the `h1 element` **also contains** a `hyperlink`. This `hyperlink` **takes** the `user` ***back*** to the `site`'s **home page**.
 
 I **change** the ***default*** `user-agent` **blue color** to a ***more vibrant*** `blue` on (`mouse`) `hover`.
 
@@ -1482,7 +1482,7 @@ I **set** the `margin shorthand property` **value** of `0.35714286em auto 1em;`.
 
 I **set** the `padding-bottom property` **value** to `1.5em`. There is ***no*** `padding-top`, so the `padding-bottom` can be **alotted** the **full** `1.5em` `line-height` **equivalent**.
 
-I **set** the `position property` to the **value** of `relative`. This is so that the `positioning properties` of `top`, `left`, `right`, and `bottom` can **move** the `div`. ***Otherwise***, the `div` would have the ***default*** `position property` **value** of `static`.
+I **set** the `position property` to the **value** of `relative`. This is so that it ***no longer*** holds the **default** `position property` **value** of `static`. It is ***positioned*** `relative` to its `normal position`. **Setting** the the `top`, `right`, `bottom`, and `left properties` will **cause** it to be **adjusted away** from its `normal position`. **Other content** will ***not*** be **adjusted** to **fit** into any **gap** left by the `element`.
 
 I **set** the `width property` **value** to `960px`. This `width` ***includes*** both the `section element` with the **class** of `"professional_experience"` and the `div element` with the **class** of `"resume_skills"`. These are the **containers** which ***represent*** the `two columns` in `viewports` `900px` and ***wider*** (**desktop**).
 
@@ -1559,7 +1559,7 @@ ul li {
 
 I **set** the `list-style-type property` to `square`.
 
-I **set** the `position property` to `relative`.
+I **set** the `position property` to `relative`. This is so that it ***no longer*** holds the **default** `position property` **value** of `static`. It is ***positioned*** `relative` to its `normal position`. **Setting** the the `top`, `right`, `bottom`, and `left properties` will **cause** it to be **adjusted away** from its `normal position`. **Other content** will ***not*** be **adjusted** to **fit** into any **gap** left by the `element`.
 
 </section>
 
@@ -1616,7 +1616,7 @@ The [a:hover pseudo class selector](https://css-tricks.com/almanac/selectors/h/h
 ---
 
 <section class="section">
-	<h2 class="sentence">Adding media queries</h2>
+	<h2 class="sentence center">Adding media queries</h2>
 </section>
 
 ---
@@ -1925,12 +1925,12 @@ I **set** the `padding-top property` to the **value** of `0.75em`.
 ***Next*** I **define** the `.footer-nav li descendant combinator selector`. It **targets** the `child li elements` of the `child nav element` of the `footer` with the **class** of `"footer-nav"`.
 
 ```css
-.footer-nav li {
+..footer-nav li {
 	border-bottom: 0.07142855em dashed;
 	font-size: 1.3em;
-	line-height: 2;
-    list-style-type: none;
-    margin: 0.5vw;
+	line-height: 3.5;
+	list-style-type: none;
+	margin: 0 0.5vw;
 }
 ```
 
@@ -1938,11 +1938,11 @@ I **set** the `border-bottom shorthand property` to the **value** of `0.07142855
 
 I **set** the `font-size property` to the **value** of `1.3em`.
 
-I **set** the `line-height property` to the **value** of `2`.
+I **set** the `line-height property` to the **value** of `3.5`.
 
 I **set** the `list-style-type property` to the **value** of `none`. This is to **remove** the ***default*** `underlining` of the `anchor elements` **inside** the **content** of the `li elements`.
 
-I **set** the `margin shorthand property` to the **value** of `0.5vw`.
+I **set** the `margin shorthand property` to the **value** of `0 0.5vw`.
 
 </section>
 
@@ -2049,6 +2049,589 @@ footer-nav li {
 ```
 
 I **set** the `border-bottom property` to `0.07142855em`, as in the `rule set` for the `h1 element selector` where I **define** a `line height` of `2` and **set** the `border-bottom` **width** to `0.07142855em` as well.
+
+</section>
+
+---
+
+<section class="section">
+	<h2 class="sentence center">The @media (min-width: 900px){} media query</h2>
+</section>
+
+---
+
+<section class="section">
+	<h2 class="sentence">The html, body, .page grouping selector</h2>
+
+***First*** in the `@media (min-width: 900px){}` `media query` is the `html, body, .page grouping selector`. It **targets** the `html element`, the `body element`, and the `div element` with the **class** of `,page`.
+
+```css
+html, body, .page {
+	border: none !important;
+	color: #444 !important;
+	filter: none !important;
+	margin: 0;
+	padding: 0;
+	text-shadow: none !important;
+}
+```
+
+I **set** the `border shorthand property` to the **value** of `none !important`. This `value` **means** that I **want** to **make sure** that the `html`, `body`, and `div element` with the **class** of `.page` have **no borders**. **Using** the `!important keyword` **ensures** that ***any*** instances of the `border property` with ***any other*** `value` than `none` is **overridden**.
+
+I **set** the `color property` to the **value** of `#444 !important`. This `value` **means** that I **want** to **make sure** that the `html`, `body`, and `div element` with the **class** of `.page` have ***no other*** `color` than `#444`. **Using** the `!important keyword` **ensures** that ***any instances*** of the `color property` with ***any other*** `value` than `#444` is **overridden**.
+
+I **set** the `filter property` to the **value** of `none !important;`. The [filter property](https://www.w3schools.com/cssref/css3_pr_filter.asp) **defines** `visual effects` (like `blur` and `saturation`) to an element (often `<img>`). This **similar** to `effects` **available** in `Adobe Photoshop`.
+
+I **set** the `margin shorthand property` to the **value** of `0;`.
+
+The `margin-top property` is **set** to the **value** of `0`.
+
+The `margin-right property` is **set** to the **value** of `0`.
+
+The `margin-bottom property` is **set** to the **value** of `0`.
+
+The `margin-left property` is **set** to the **value** of `0`.
+
+I **set** the `padding shorthand property` to `0;`.
+
+The `padding-top property` is **set** to the **value** of `0`.
+
+The `padding-right property` is **set** to the **value** of `0`.
+
+The `padding-bottom property` is **set** to the **value** of `0`.
+
+The `padding-left property` is **set** to the **value** of `0`.
+
+I **set** the `text-shadow property` to the **value** of `none !important;`. This `value` **means** that I **want** to **make sure** that the `html`, `body`, and `div element` with the **class** of `.page` have ***no*** `text-shadow`. **Using** the `!important keyword` **ensures** that ***any instances*** of the `text-shadow property` with ***any other*** `value` than `none !important;` is **overridden**.
+
+</section>
+
+---
+
+<section class="section">
+	<h2 class="sentence">The body element selector</h2>
+
+***Next***, I **define** the `body element selector`.
+
+```css
+body {
+	background-color: rgb(110,110,110) !important;
+}
+```
+
+I **set** the `background-color property` to the **value** of `rgb(110,110,110) !important;`. It is the `dark grey color` **surrounding** the **resume page**.
+
+</section>
+
+---
+
+<section class="section">
+	<h2 class="sentence">The .footer-nav li descendant selector</h2>
+
+***Next***, I **define** the `.footer-nav li descendant combinator selector`. It **targets** the `child li elements` of the `footer nav element` with the **class** of `.footer-nav`.
+
+```css
+.footer-nav li {
+	border-bottom: none;
+}
+```
+
+I **set** the `border-bottom property` value to `none`.
+
+</section>
+
+---
+
+<section class="section">
+	<h2 class="sentence">The .footer-nav li:nth-of-type(n) descendant selector</h2>
+
+***Next***, I **define** the `.footer-nav li:nth-of-type(n) descendant combinator selector`. The `:nth-of-type(n) selector` ***matches every*** `element` that is the `nth child`, of a `particular type`, of its `parent`. ***Here***, it is the ***first*** `child li element` of the `ul element` **inside** the `footer nav` with the **class** of `.footer-nav`.
+
+```css
+.footer-nav li:nth-of-type(1) {
+	margin-left: 0.75rem;
+}
+```
+
+I **set** the `margin-left property` to the **value** of `0.75em`. This is ***equivalent*** to `12px`.
+
+</section>
+
+---
+
+<section class="section">
+	<h1 class="capitalize">The Page Holder</h1>
+</section>
+
+---
+
+<section class="section">
+	<h2 class="sentence">The .page class selector</h2>
+
+***Next***, I **define** the `.page class selector`. It **targets** the `div element` with the **class** of `.page`. This `div element` **surrounds** the ***entire content*** of the `resume.html` **page**.
+
+```css
+/* page holder */
+.page {
+	background: #fff;
+	margin: 0.35714286em auto 1em;
+	position: relative;
+	width: 93.75%;
+} /* 960px / 1024px */
+```
+
+I **set** the `background property` to the **value** of `#fff`. This is the `property` which **makes** the **page background** white.
+
+I **set** the `margin shorthand property` to the **value** of `0.35714286em auto 1em;`. This is the `property` which **centers** the `div element` with the **class** of `.page` **horizontally** on the `web page`.
+
+The `margin-top property` is **set** to the **value** of `0.35714286em`.
+
+The `margin-left` and `margin-right properties` are **set** to the **value** of `auto`.
+
+I **set** the `position property` to the **value** of `relative`. This is so that it ***no longer*** holds the **default** `position property` **value** of `static`. It is ***positioned*** `relative` to its `normal position`. **Setting** the the `top`, `right`, `bottom`, and `left properties` will **cause** it to be **adjusted away** from its `normal position`. **Other content** will ***not*** be **adjusted** to **fit** into any **gap** left by the `element`.
+
+I **set** the `width property` to the `value` of `93.75%`. This is what ***creates*** the **gap between** the **edges** of the `viewport` and the **edges** of the `div element` with the **class** of `.page`. That is ***also why*** the `dark grey background` behind the **resume page** is at all **visible**.
+
+</section>
+
+---
+
+<section class="section">
+	<h1 class="capitalize">Two Column Layout</h1>
+</section>
+
+---
+
+<section class="section">
+	<h2 class="sentence">The .page .professional_experience class selector</h2>
+
+***Next***, I **define** the .`page .professional_experience class selector`. It **targets** the the `section element` with the **class** of `.professional_experience` within the `div element` with the **class** of `.page`. This is the `first` (`left`) `column` in the `desktop two column layout`.
+
+```css
+/* 2 columm layout */
+/* column 1: section/article */
+.page .professional_experience {
+	float: left;
+	margin-bottom: 0.35714286em;
+	margin-top: 1em;
+	width: 590px;
+}
+```
+
+I **set** the `float property` to the **value** of `left`. This **moves** (**floats**) the `section element` with the **class** of `.professional_experience` to the **left**.
+
+I **set** the `margin-bottom property` to the **value** of `0.35714286em;`.
+
+I **set** the `width property` to the **value** of `590px`.
+
+</section>
+
+---
+
+<section class="section">
+	<h2 class="sentence">The .page .resume_skills class selector</h2>
+
+***Next***, I **define** the `.page .resume_skills class selector`. This **targets** the `div element` with the **class** of `.resume_skills`. This is the `second` (`right`) `column` in the `desktop two column layout`.
+
+```css
+/* column 2: div/aside */
+.page .resume_skills {
+	float: right;
+	margin-top: 1em;
+	width: 365px;
+}
+```
+
+I **set** the `float property` to the **value** of `right`. This **moves** (**floats**) the `div element` with the **class** of `.resume_skills` to the **right**.
+
+I **set** the `margin-top property` to the **value** of `1em`.
+
+I **set** the `width property` to the **fixed value** of `365px`.
+
+The **first column**'s `width` **value** of `590px` and the **second column**'s `width` **value** of `365px` **together equal** `955px`.
+
+</section>
+
+---
+
+<section class="section">
+	<h1 class="capitalize">The Layout Padding</h1>
+</section>
+
+---
+
+<section class="section">
+	<h2 class="sentence">The article element selector</h2>
+
+***Next***, I **define** the `article element selector`. This **targets** all `elements` on the `resume.html` **page**.
+
+```css
+/* layout padding*/
+article {
+	margin: 0 20px 0 40px;
+	position: relative;
+}
+```
+
+I **set** the `margin shorthand property` to the **value** of `0 20px 0 40px;`.
+
+The `margin-top property` **value** is **set** to `0.`
+
+The `margin-right property` **value** is **set** to `20px`.
+
+The `margin-bottom property` **value** is **set** to `0`.
+
+The `margin-left property` **value** is **set** to `40px`.
+
+I **set** the `position property` to the **value** of `relative`. This is so that it ***no longer*** holds the **default** `position property` **value** of `static`. It is ***positioned*** `relative` to its `normal position`. **Setting** the the `top`, `right`, `bottom`, and `left properties` will **cause** it to be **adjusted away** from its `normal position`. **Other content** will ***not*** be **adjusted** to **fit** into any **gap** left by the `element`.
+
+</section>
+
+---
+
+<section class="section">
+	<h2 class="sentence">The aside element selector</h2>
+
+***Next***, I **define** the `aside element selector`. It **targets** all the `aside elements` on the `resume.html` **page**.
+
+```css
+aside {
+	margin: 0 40px 0 1.25rem;
+	position: relative;
+}
+```
+
+I **set** the `margin shorthand property` to the **value** of `0 40px 0 1.25rem;`.
+
+The `margin-top property` is **set** to the **value** of `0`.
+
+The `margin-right property` is **set** to the **value** of `40px`.
+
+The `margin-bottom property` is **set** to the **value** of `0`.
+
+The `margin-left property` is **set** to the **value** of `1.25rem`.
+
+The `position property` is **set** to the **value** of `relative`. This is so that it ***no longer*** holds the **default** `position property` **value** of `static`. It is ***positioned*** `relative` to its `normal position`. **Setting** the the `top`, `right`, `bottom`, and `left properties` will **cause** it to be **adjusted away** from its `normal position`. **Other content** will ***not*** be **adjusted** to **fit** into any **gap** left by the `element`.
+
+</section>
+
+---
+
+<section class="section">
+	<h2 class="sentence">The aside h2 descendant selector</h2>
+
+***Next***, I **define** the `aside h2 descendant combinator selector`. It **targets** the `child h2 elements` within the `aside elements` of the `resume.html` **page**.
+
+```css
+aside h2 {
+	margin-bottom: 1.05357em;
+}
+```
+
+I **set** the `margin-bottom property` to the **value** of `1.05357em;`.
+
+</section>
+
+---
+
+<section class="section">
+	<h2 class="sentence">The .page .professional_experience class slector (redefined)</h2>
+
+***Next***, I **redefine** the `.page .professional_experience class selector`. This **targets** the `section element` with the **class** of `.professional_experience` within the `div element` with the **class** of `.page`.
+
+So ***why*** this **redefinition**? Honestly, I don't know **why** the ***first definitions*** were **made** a **little earlier** in this `media query`, but I **once** I ***saw*** what was going on with this `code`, I **wanted** to ***keep*** both definitions to **show** what happens when ***one*** `rule set` is **defined higher** up the `external stylesheet`, ***followed by*** a **redefinition** of ***that*** `selector` with the ***same*** `property declarations`, but ***different*** `values`.
+
+```css
+/* 2 columm layout */
+/* column 1: */
+.page .professional_experience {
+	float: left;
+	margin-bottom: 0.35714286em;
+	width: 61.45833%;
+} /* 590px / 960px */
+```
+
+***Here***, **only three** of the ***four*** `properties` from the **earlier** `.page .professional_experience class selector` were ***redefined***.
+
+The `float property`, the `margin-bottom property`, and the `width property` are **redefined**.
+
+The `margin-top property` was ***not*** `redefined`, so its **value** remains the ***same***.
+
+The ***new*** `value` for the `float property` is the **same** as the ***previous*** `value` of `left`.
+
+The ***new*** `value` of the `margin-bottom property` is the **same** as the ***previous*** `value` of `0.35714286em;`.
+
+The **thing** that ***has changed*** (and for **the better**) is the ***new*** `value` for the `width property`. ***Now*** it is **set** to the `relative length unit` (`fluid design`) of `width: 61.45833%;`.
+
+This is a ***very good*** `example` of **why** one has to be ***careful*** about **repeating** `property declarations` in `external stylesheets`. In ***this case***, the **change** was for the ***better***. But ***sometimes*** it can be the **other way around**! ***And*** one **wants** to be as **terse** as ***possible*** with the `CSS code`. The ***more*** `code` there is for the `browser` to **download**, the ***slower*** the `process`. That **means** it ***takes longer*** for the **page** to ***render***, and the `user` might **end up** `leaving` in the ***process*** and ***potentially*** `never` **coming back**.
+
+</section>
+
+---
+
+<section class="section">
+	<h2 class="sentence">The .page .resume_skills class selector (redefined)</h2>
+
+***Next***, I **redefine** the `.page .resume_skills class selector`. This **targets** the `div element` with the **class** of `.resume_skills` within the `div element` with the **class** of `.page`.
+
+So ***why*** this **redefinition**? Honestly, I ***don't know*** why the **first definitions** were **made** a ***little earlier*** in this `media query`, but **once** I **saw** what was **going on** with `this code`, I **wanted** to **keep both** `definitions` to ***show*** what happens when ***one*** `rule set` is `defined` **higher up** the `external stylesheet`, ***followed by*** a **redefinition** of that `selector` with the ***same*** `property declarations`, but ***different*** `values`.
+
+```css
+/* column 2: */
+.page .resume_skills {
+	float: right;
+	width: 34.375%;
+}  /* 270px / 960px */
+```
+
+In the ***previous*** `definition` of the `.page .resume_skills class selector` **within** this `min-width: 900px` media query, the `float`, `margin-top`, and `width properties` were **defined**. ***Here***, only the `float` and `width properties` are **redefined**.
+
+***However***, the `float property` is **redefined** with the ***same*** `value` of `right`.
+
+***Since*** the `margin-top property` is ***not*** `redefined` here, its ***previous*** `value` of `1em` **holds**.
+
+The **thing** that ***has changed*** (and for **the better**) is the ***new*** `value` for the `width property`. ***Now*** it is **set** to the `relative length unit` (`fluid design`) of `34.375%;`.
+
+The `fluid width` for the ***first*** `column` (**represented** by the `.page .professional_experience class selector`) and the `fluid width` for the ***second*** `column` (**represented** by the `.page .resume_skills class selector`) **equals** `95.8333%`. The ***difference*** between `100%` and `95.8333%` is ***allocated*** to **margins** between the **edges** of the `div element` with the **class** of `.page` and the ***outer*** `left` and `right edges` on the `horizontal axis` (`width`) of the **two columns**.
+
+</section>
+
+---
+
+<section class="section">
+	<h2 class="sentence">The header p descendant selector</h2>
+
+***Next***, I **define** the `header p descendant combinator selector`. This **targets** any `p elements` within the `header element`.
+
+```css
+header p {
+	width: 57.291667%;
+}
+```
+
+I **set** the `width property` to the **value** of `57.291667%`. If we **look** at the `resume.html` **page** in the `browser`, we **see** that the `paragraph` ***under*** the **title** `Full Stack Developer` does ***not*** span the `entire width` of the **page**. Only about ***half***, or **approximately** `57.291667%`.
+
+</section>
+
+---
+
+<section class="section">
+	<h2 class="sentence">The b element selector</h2>
+
+***Next***, I **define** the `b element selector`. It **targets** all the `b elements` on the `resume.html` **page**.
+
+```css
+b {
+	font-weight: normal;
+	margin-top: -2px;
+	padding-top: 0;
+	position: absolute;
+	right: 0;
+}
+```
+
+I **set** the `font-weight property` to `normal`. This is so that the `text content` of the `b element` is of a `normal weight` and ***not*** `bold`. So ***why*** would I **use** the `b element` if I ***don't want*** the `text` to be `bold`? Because I want to **target** that `text` **separately** from the `text content` of the `strong element` ***within*** the `section element` with the **class** of `.education`. That is the ***only place*** where the `b element` is **used**. The `text content` which **appears** there is the `location` of the `schools` I **attended**.
+
+I **set** the `margin-top property` to the **value** of `2px`. This is to **bring up** the **school location** `text content` to the ***same level*** as the `text content` within the `strong element` **representing** the **degree received**.
+
+I **set** the `padding-top property` to the **value** of `0`.
+
+I **set** the `position property` to the **value** of `absolute`.
+
+I **set** the `right positioning property` to the **value** of `0`.
+
+</section>
+
+---
+
+<section class="section">
+	<h2 class="sentence">The h3 + p adjacent sibling selector</h2>
+
+***Next***, I **define** the `h3 + p adjacent element sibling selector`. This **targets** the `p element` which follows **right after** any `h3 elements` on the **page**.
+
+```css
+h3 + p {
+	max-width: 75%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+```
+
+I **set** the `max-width property` to the **value** of `75%;`.
+
+I **set** the `overflow property` to the **value** of `hidden`. This **hides** any `element overflow` on the `x` (`horizontal`) or `y` (`vertical`) `axis`.
+
+I **set** the `text-overflow property` to the **value** of `ellipsis`. This **means** that if there is an `overflow` to the `text content` ***inside*** the `p element`, the **overflowed** `text content` will ***result*** in an `ellipsis` (`...`).
+
+I **set** the [white-space property](https://www.w3schools.com/cssref/pr_text_white-space.asp) to the **valu** of `nowrap`. This **means** that `sequences` of `whitespace` will ***collapse*** into a **single whitespace**. `Text` will ***never wrap*** to the **next line**. The `text` ***continues*** on the **same line** until a `<br />` **tag** is **encountered**. That's why I ***sometimes*** have to **use** a `<br />` **tag** in my `HTML markup`.
+
+</section>
+
+---
+
+<section class="section">
+	<h1 class="capitalize">The footer placement</h1>
+</section>
+
+---
+
+<section class="section">
+	<h2 class="sentence">The footer h3 descendant selector</h2>
+
+***Next***, I **define** the `footer h3 descendant combinator selector`. It **targets** `h3 elements` within the `footer element`.
+
+```css
+/* =footer placement */
+footer h3 {
+	margin-left: 0.5rem;
+}
+```
+
+I **set** the `margin-left property` to the **value** of `0.5rem`.
+
+</section>
+
+---
+
+<section class="section">
+	<h2 class="sentence">The .contact-info class selector</h2>
+
+***Next***, I **define** the `.contact-info class selector`. It **targets** the `section element` with the **class** of `.contact-info` within the `footer element`.
+
+```css
+.contact-info {
+	display: flex;
+	justify-content: flex-start;
+	margin-left: 0.5rem;
+}
+```
+
+I **set** the `display property` to the **value** of `flex`. This **lays out** the `section` **content** to the `Flexbox` **default layout** of `row`.
+
+I **set** the (`Flexbox`) `justify-content property` to the **value** of `flex-start`. This **places** the `content` all the way to the `left` of the **page**. It is ***similar*** to **setting** the `float property` to the **value** of `left`.
+
+I **set** the `margin-left property` to the **value** of `0.5rem`.
+
+</section>
+
+---
+
+<section class="section">
+	<h2 class="sentence">The .contact-info p:nth-of-type(n) descendant selector </h2>
+
+***Next***, I **define** the `.contact-info p:nth-of-type(n) descendant combinator selector`. The `:nth-of-type(n) selector` **matches** `every element` that is the `nth child`, of a **particular type**, of its `parent`. ***Here***, it is the ***first*** `child p element` of the `section element` with the **class** of `.contact-info` within the `footer element`.
+
+```css
+.contact-info p:nth-of-type(1) {
+	margin-right: 1.5rem;
+}
+```
+
+I **set** the `margin-right property` to the **value** of `1.5rem;`.
+
+</section>
+
+---
+
+<section class="section">
+	<h2 class="sentence">The .footer-nav class selector</h2>
+
+***Next***, I **define** the `.footer-nav class selector`. It **targets** the `nav element` with the **class** of `.footer-nav` within the `footer element`.
+
+```css
+.footer-nav {
+	width: 100vw;
+}
+```
+
+I **set** the `width property` with the **value** of `100vw`. This **makes** the `footer nav element width` `100%` of the `viewport width`.
+
+</section>
+
+---
+
+<section class="section">
+	<h2 class="sentence">The .footer-nav ul descendant selector</h2>
+
+***Next***, I **define** the `.footer-nav ul descendant combinator selector`. It **targets** the `ul element` within the `footer nav element` with the **class** of `.footer-nav`.
+
+```css
+.footer-nav ul {
+	display: flex;
+	justify-content: flex-start;
+	margin-left: -1.5rem;
+	padding-bottom: 1.25rem;
+	padding-top: 0.75rem;
+}
+```
+
+I **set** the `display property` to the **value** of `flex`. This **lays out** the `ul content` of the `footer nav` to the `Flexbox` **default layout** of `row`.
+
+I **set** the `justify-content property` (`Flexbox`) to the **value** of `flex-start`. This **places** the `ul content` all the way to the `left` of the **page**. It is ***similar*** to **setting** the `float property` to the **value** of `left`.
+
+I **set** the `margin-left property` to the **value** of `-1.5rem`. This `negative value` ***moves*** the `ul element` **more** to the `left`. A `positive value` would **move** the `ul element` **content** more to the `right`.
+
+I **set** the `padding-bottom property` to the **value** of `1.25rem;`.
+
+I **set** the `padding-top property` to the **value** of `0.75rem;`.
+
+</section>
+
+---
+
+<section class="section">
+	<h2 class="sentence">The .footer-nav li descendant selector</h2>
+
+***Next***, I **define** the `.footer-nav li descendant combinator selector`. It **targets** the `child li elements` of the `footer nav element` with the **class** of `.footer-nav`.
+
+</section>
+
+---
+
+<section class="section">
+	<h2 class="sentence">The .footer-nav a descendant selector</h2>
+
+***Next***, I **define** the `.footer-nav a descendant combinator selector`. It **targets** the `child anchor elements` within the `footer nav element` with the **class** of `.footer-nav`.
+
+```css
+.footer-nav a {
+	cursor: pointer;
+	padding: 2vw;
+	text-decoration: none;
+}
+```
+
+I **set** the `cursor property` to the **value** of `pointer;`. This ***transforms*** the `mouse cursor` to a `little hand`, and **enhances** the `user` **UI/UX** when they `hover` over an `element` or `click` it. It ***increases*** the `selection accuracy` of the `mouse` or `keypad` of a **device**.
+
+I **set** the `padding shorthand property` to the **value** of `2vw`.
+
+The `padding-top property` is **set** to the **value** of `2vw`.
+
+The `padding-right property` is **set** to the **value** of `2vw`.
+
+The `padding-bottom property` is **set** to the **value** of `2vw`.
+
+the `padding-left property` is **set** to the **value** of `2vw`.
+
+I **set** the `text-decoration property` to the **value** of `none;`. This **removes** the ***default*** `user-agent` **underlining** of the `anchor element`.
+
+</section>
+
+---
+
+<section class="section">
+	<h2 class="sentence">The .footer-nav a:hover descendant selector</h2>
+
+***Next***, I **define** the `.footer-nav a:hover descendant combinator pseudo class selector`. It **targets** the `child anchor element` within the `footer nav element` with the **class** of `.footer-nav` **on hover**. I **wanted** to **make sure** that **users** were ***alerted*** that the `footer nav element` **contains** `hyperlinks`. These `hyperlinks` **permit** `users` to **make calls** to the `owner` of the `site` on **mobile devices** and ***also*** to **send emails**.
+
+```css
+.footer-nav a:hover {
+	color: #0030ff;
+}
+```
+
+I **set** the `color property` to the **value** of the `#0030ff;` `color hex code`. When the `user` ***hovers over*** the `anchor element`, it **changes** to this `vibrant shade` of `blue`.
 
 </section>
 
