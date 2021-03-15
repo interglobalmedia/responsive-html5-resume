@@ -150,7 +150,8 @@ a:link, a:active, a:focus, a:visited, a:hover {
 }
 
 @media (min-width: 320px) {
-    html, body {
+
+	html, body {
 		margin: 0;
 		padding: 0;
 		text-shadow: none;
@@ -226,10 +227,10 @@ a:link, a:active, a:focus, a:visited, a:hover {
 
 	.footer-nav li {
 		border-bottom: 1px dashed;
+		font-size: 1.3em;
 		line-height: 3.5;
 	    list-style-type: none;
 	    margin: 0 0.5vw;
-		font-size: 1.3em;
 	}
 
 	.footer-nav a {
@@ -248,7 +249,6 @@ a:link, a:active, a:focus, a:visited, a:hover {
     html, body, .page {
 		border: none !important;
 		color: #444 !important;
-		-ms-filter: none !important;
 		filter: none !important;
 		margin: 0;
 		padding: 0;
@@ -271,11 +271,12 @@ a:link, a:active, a:focus, a:visited, a:hover {
     .page {
 		background: #fff;
 		margin: 0.35714286em auto 1em;
-		position: relative; width: 93.75%;
+		position: relative;
+		width: 93.75%;
 	} /* 960px / 1024px */
 
   	/* 2 columm layout */
-	/* column 1: article */
+	/* column 1: section/article */
 	.page .professional_experience {
 		float: left;
 		margin-bottom: 0.35714286em;
@@ -283,7 +284,7 @@ a:link, a:active, a:focus, a:visited, a:hover {
 		width: 590px;
 	}
 
-	/* column 2: aside */
+	/* column 2: div/aside */
 	.page .resume_skills {
 		float: right;
 		margin-top: 1em;
@@ -320,7 +321,7 @@ a:link, a:active, a:focus, a:visited, a:hover {
 	}  /* 270px / 960px */
 
     header p {
-		width: 57.291667%
+		width: 57.291667%;
 	}
 
 	b {
