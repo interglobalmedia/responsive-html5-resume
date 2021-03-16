@@ -778,7 +778,7 @@ My ***complete*** `"interests"` **aside widget** looks like the **following**:
 
 **Below** the `opening section tag` with the **class** of `"contact-info"`, I **add** an `opening p tag` with the **class** of `"tel"`.
 
-**After** the `opening p tag` with the **class** of `"tel"`, I **add** an `opening strong tag` **ollowed by** an `opening span tag` with the **class** of `"type"`. The `opening span tag` with the **class** of `"type"` is **followed by** the `text content` of `"Cell"`. The `text content` of `"Cell"` is **followed by** a `closing span tag`, **followed by** a `:` and ***then*** a `closing span tag`. The `closing span tag` is **followed by** a `closing strong tag`.
+**After** the `opening p tag` with the **class** of `"tel"`, I **add** an `opening strong tag` **followed by** an `opening span tag` with the **class** of `"type"`. The `opening span tag` with the **class** of `"type"` is **followed  by**  the `text content` of `"Cell"`. The `text content` of `"Cell"` is **followed by** a `closing span tag`, **followed by** a `:` and ***then*** a `closing span tag`. The `closing span tag` is **followed by** a `closing strong tag`.
 
 **After** the `closing strong tag`, I **add** an `a element`. **Inside** the `opening a tag`, I **add** the `href attribute` with the `value` of `"tel:+xxx-xxx-xxxx"`. This is **called** a [tel: URL scheme](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a) and is **supported** by `browsers`. This `value` **permits you** to **make** a `phone call` on the `web` via `phone numbers` ***associated with*** `mobile devices`.
 
@@ -853,7 +853,7 @@ If the `person` ***trying*** to **contact** `you` on your `mobile device` **migh
 		<li><a href="portfolio.html">Portfolio</a></li>
 		<li><a href="resume.html">Résumé</a></li>
 		<li><a href="about.html">About</a></li>
-		<li><a href="index.html">Contact</a></li>
+		<li><a href="contact.html">Contact</a></li>
 	</ul>
 </nav>
 ```
