@@ -1839,23 +1839,6 @@ I **set** the `margin shorthand property` **value** to `0.5vh 0`. This ***also c
 ---
 
 <section class="section">
-	<h2 class="sentence">The .achievements li a descendant selector</h2>
-
-***Next*** comes the `.achievements li a descendant combinator selector`. It **targets** the `anchor elements` **inside** the `li children` of the `section element` with the `"achievemests"` **class**.
-
-```css
-.achievements li a {
-	padding: 2vw;
-}
-```
-
-I **set** the `padding shorthand property` **value** to `2vw`. I **set** this `line-height` because I **needed** to make **enough room** around the `clickable anchor links` **inside** the `child li elements` of the `section element` with the **class** of `"achievements"`. This ***increased*** the `SEO performance` of the **page** in `mobile devices` via `Lighthouse` **testing**.
-
-</section>
-
----
-
-<section class="section">
 	<h2 class="sentence">The article, aside grouping selector</h2>
 
 ***Next***, I **define** an `article`, `aside element` `grouping selector`. This `selector` **targets** all `article` and `aside elements` on the **page**.
