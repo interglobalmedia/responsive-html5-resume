@@ -1208,7 +1208,7 @@ h4 {
 }/* 18px / 16px */
 ```
 
-I **set** the `font-size` to `1.1255em`. This is actually ***larger*** than the ***default*** `user-agent` **font-size** for the `h4 element` (`1 em`). `1.1255em` is **equivalent** to `18.01px`, ***rounded off***, `18px`.
+I **set** the `font-size` to `1.1255em`. This is actually ***larger*** than the ***default*** `user-agent` **font-size** for the `h4 element` (`1em`). `1.1255em` is **equivalent** to `18.01px`, ***rounded off***, `18px`.
 
 I **set** the `line height` to `1.2857`. ***Rounded off*** 3 `decimal places`, it would be `1.286`. And that is the `line height` for the `font-size` of `18px`, or `1.1255em`. To **calculate** the `line-height`, I do the **following**:
 
@@ -1252,7 +1252,7 @@ h4, h5, h6 {
 }
 ```
 
-I **grouped** the `h4`, `h5`, and `h6 elements` into a `grouping selector` **containing** the `property declaration` of `color: 111;` This is **one** of the ***few opportunities*** there are to **make** my `CSS code` ***drier***!
+I **grouped** the `h4`, `h5`, and `h6 elements` into a `grouping selector` **containing** the `property declaration` of `color: #111;` This is **one** of the ***few opportunities*** there are to **make** my `CSS code` ***drier***!
 
 </section>
 
@@ -1390,7 +1390,7 @@ header h2, header p {
 
 Since we are ***applying*** the **same** `property declarations` to the `h2 element` and the `p element` ***inside*** the `header element`, we **combine** the ***targeted*** `header h2 element` with the `header p element` and **form** a `grouping selector`.
 
-By ***default***, I **set** the `padding shorthand property` **value** to `0 40x;` and the `width property` **value** to `510px`. This `width` is **wide enough** so that the ***very large*** `h1 element` **can fit**.
+By ***default***, I **set** the `padding shorthand property` **value** to `0 40px;` and the `width property` **value** to `510px`. This `width` is **wide enough** so that the ***very large*** `h1 element` **can fit**.
 
 Why ***this width***? Because this is the ***first width*** where the `h1 element` looks good and is ***not*** a **tight fit**.
 
@@ -2335,7 +2335,7 @@ I **set** the `margin-bottom property` to the **value** of `1.05357em;`.
 ---
 
 <section class="section">
-	<h2 class="sentence">The .page .professional_experience class slector (redefined)</h2>
+	<h2 class="sentence">The .page .professional_experience class selector (redefined)</h2>
 
 ***Next***, I **redefine** the `.page .professional_experience class selector`. This **targets** the `section element` with the **class** of `.professional_experience` within the `div element` with the **class** of `.page`.
 
@@ -2432,7 +2432,7 @@ b {
 
 I **set** the `font-weight property` to `normal`. This is so that the `text content` of the `b element` is of a `normal weight` and ***not*** `bold`. So ***why*** would I **use** the `b element` if I ***don't want*** the `text` to be `bold`? Because I want to **target** that `text` **separately** from the `text content` of the `strong element` ***within*** the `section element` with the **class** of `.education`. That is the ***only place*** where the `b element` is **used**. The `text content` which **appears** there is the `location` of the `schools` I **attended**.
 
-I **set** the `margin-top property` to the **value** of `2px`. This is to **bring up** the **school location** `text content` to the ***same level*** as the `text content` within the `strong element` **representing** the **degree received**.
+I **set** the `margin-top property` to the **value** of `-2px`. This is to **bring up** the **school location** `text content` to the ***same level*** as the `text content` within the `strong element` **representing** the **degree received**.
 
 I **set** the `padding-top property` to the **value** of `0`.
 
@@ -2463,6 +2463,17 @@ I **set** the `max-width property` to the **value** of `75%;`.
 I **set** the `overflow property` to the **value** of `hidden`. This **hides** any `element overflow` on the `x` (`horizontal`) or `y` (`vertical`) `axis`.
 
 I **set** the `text-overflow property` to the **value** of `ellipsis`. This **means** that if there is an `overflow` to the `text content` ***inside*** the `p element`, the **overflowed** `text content` will ***result*** in an `ellipsis` (`...`).
+
+The `text-overflow: ellipsis;` **property declaration** of the `adjacent sibling selector` ***specifically targets*** (due to the `text width issue`) the `p element` that ***follows*** the `h3 element` with the `text content` of
+
+```html5
+<h3>Columbia University<br>
+  School of International and Public Affairs<br>
+  <time datetime="2000-05-20" class="end">12/1987</time>
+</h3>
+```
+
+You can see it **in action** at the `viewport width` ***larger than*** `900px wide`. At a `viewport width` of ***approximately*** `970px wide`, the `ellipsis (...)` ***no longer*** appears, because there is **enough room** for ***all*** the `text` to **fit**.
 
 I **set** the [white-space property](https://www.w3schools.com/cssref/pr_text_white-space.asp) to the **valu** of `nowrap`. This **means** that `sequences` of `whitespace` will ***collapse*** into a **single whitespace**. `Text` will ***never wrap*** to the **next line**. The `text` ***continues*** on the **same line** until a `<br />` **tag** is **encountered**. That's why I ***sometimes*** have to **use** a `<br />` **tag** in my `HTML markup`.
 
@@ -2584,6 +2595,17 @@ I **set** the `padding-top property` to the **value** of `0.75rem;`.
 	<h2 class="sentence">The .footer-nav li descendant selector</h2>
 
 ***Next***, I **define** the `.footer-nav li descendant combinator selector`. It **targets** the `child li elements` of the `footer nav element` with the **class** of `.footer-nav`.
+
+```css
+.footer-nav li {
+	list-style-type: none;
+	margin: 0.5vw;
+}
+```
+
+I **set** the `list-style-type property` to the **value** of `none` so that the `li elements` **within** the the `nav element` ***inside*** the `footer element` **don't have** any `bullets`.
+
+I **set** the `margin shorthand property` to the **value** of `0.5vw` to **create space** between the `li elements` of the `footer nav element`.
 
 </section>
 
