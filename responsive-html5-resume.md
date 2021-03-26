@@ -611,8 +611,7 @@ My **complete** `"Education" widget` **looks like** the **following**:
 	<p>International Finance
 		and Banking<br />Eastern European
 		Studies<br /><strong>Masters</strong><b>N.Y.,
-			N.Y.</b><br />
-
+			N.Y.</b>
 	</p>
 	<h3>Barnard College<br />
 		<time datetime="2000-05-20"
@@ -621,7 +620,7 @@ My **complete** `"Education" widget` **looks like** the **following**:
 	<p>French
 		Literature<br />
 		<strong>Bachelor
-			of Arts</strong> <b>N.Y., N.Y.</b><br />
+			of Arts</strong> <b>N.Y., N.Y.</b>
 	</p>
 </section>
 ```
