@@ -1860,7 +1860,7 @@ I **set** the `padding shorthand property` **value** to `0`.
 <section class="section">
 	<h2 class="sentence">The footer element selector</h2>
 
-Next, I define the footer element selector. It targets the footer element in the resume.html HTML markup.
+***Next***, I **define** the `footer element selector`. It **targets** the `footer element` in the `resume.html` HTML markup.
 
 ```css
 footer {
@@ -1869,9 +1869,9 @@ footer {
 }
 ```
 
-i set the font-size property to the value of `inherit: !important;`. this means that the footer should be inheriting its font-size from the div with the class of `.page`. The `!important` keyword means that this value of `inherit` should override any other value set to the font-size property of the footer in the CSS code.
+I **set** the `font-size property` to the **value** of `inherit: !important;`. This ***means*** that the `footer` should be `inheriting` its `font-size` from the `div` with the **class** of `.page`. The `!important keyword` ***means*** that this **value** of `inherit` should ***override*** any other **value set** to the `font-size property` of the `footer` in the `CSS code`.
 
-I set the margin-bottom property to the value of `1em;`.
+I **set** the `margin-bottom property` to the **value** of `1em;`.
 
 </section>
 
