@@ -1425,9 +1425,9 @@ CSS text-shadow Property](https://www.w3schools.com/cssref/css3_pr_text-shadow.a
 ---
 
 <section class="section">
-	<h2 class="sentence">The header display: header a:hover selector</h2>
+	<h2 class="sentence">The header display: header h1 a:hover selector</h2>
 
-***Next***, and **last** in the `header display selectors`, is the `header a:hover descendant combinator pseudo class selector`.
+***Next***, and **last** in the `header display selectors`, is the `header h1 a:hover descendant combinator pseudo class selector`.
 
 ```css
 header a:hover {
