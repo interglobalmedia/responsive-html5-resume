@@ -1858,6 +1858,26 @@ I **set** the `padding shorthand property` **value** to `0`.
 ---
 
 <section class="section">
+	<h2 class="sentence">The footer element selector</h2>
+
+Next, I define the footer element selector. It targets the footer element in the resume.html HTML markup.
+
+```css
+footer {
+	font-size: inherit !important;
+	margin-bottom: 1em;
+}
+```
+
+i set the font-size property to the value of `inherit: !important;`. this means that the footer should be inheriting its font-size from the div with the class of `.page`. The `!important` keyword means that this value of `inherit` should override any other value set to the font-size property of the footer in the CSS code.
+
+I set the margin-bottom property to the value of `1em;`.
+
+</section>
+
+---
+
+<section class="section">
 	<h2 class="sentence">The .contact-info p descendant selector</h2>
 
 ***Next*** comes the `.contact-info p descendant combinator selector`. It **targets** the `child p elements` of the `section element` with the **class** of `"contact-info"`.
